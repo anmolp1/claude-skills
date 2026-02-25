@@ -32,13 +32,22 @@ cd claude-skills
 ./install.sh --check
 ```
 
+### Uninstall skills
+
+```bash
+./install.sh --uninstall gtm-plan-generator   # Uninstall a specific skill
+./install.sh --uninstall                       # Uninstall all skills from this repo
+```
+
 ### Windows (PowerShell)
 
 ```powershell
 git clone https://github.com/anmolp1/claude-skills.git
 cd claude-skills
-.\install.ps1                     # Install all skills
-.\install.ps1 gtm-plan-generator  # Install a specific skill
+.\install.ps1                                  # Install all skills
+.\install.ps1 gtm-plan-generator               # Install a specific skill
+.\install.ps1 --uninstall gtm-plan-generator   # Uninstall a specific skill
+.\install.ps1 --uninstall                      # Uninstall all skills from this repo
 ```
 
 ### Manual installation
@@ -105,6 +114,28 @@ skill-name/
 │   └── ...               # Skill-specific reference files
 └── templates/            # Output templates (if applicable)
     └── ...
+```
+
+### YAML Frontmatter Reference
+
+Every `SKILL.md` begins with a YAML frontmatter block that controls how Claude Code discovers and invokes the skill.
+
+| Field | Required | Description |
+|-------|----------|-------------|
+| `name` | Yes | Skill identifier (kebab-case), shown in the `/` menu |
+| `description` | Yes | When to trigger — Claude uses this for auto-invocation matching |
+| `user-invocable` | No | Whether the skill appears in the `/` slash-command menu (default: `true`) |
+| `disable-model-invocation` | No | Prevent Claude from auto-triggering this skill (default: `false`) |
+| `allowed-tools` | No | Comma-separated list of tools the skill can use without permission prompts |
+
+**Minimal example:**
+
+```yaml
+---
+name: my-skill
+description: "Trigger phrase and context description here"
+user-invocable: true
+---
 ```
 
 ## Dependencies

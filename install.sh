@@ -2,10 +2,13 @@
 # Install Claude Code skills from this repository
 # Usage: ./install.sh [skill-name]
 #        ./install.sh --check
+#        ./install.sh --uninstall [skill-name]
 # Examples:
-#   ./install.sh                    # Install all skills
-#   ./install.sh gtm-plan-generator # Install a specific skill
-#   ./install.sh --check            # List installed skills
+#   ./install.sh                              # Install all skills
+#   ./install.sh gtm-plan-generator           # Install a specific skill
+#   ./install.sh --check                      # List installed skills
+#   ./install.sh --uninstall gtm-plan-generator  # Uninstall a specific skill
+#   ./install.sh --uninstall                  # Uninstall all skills from this repo
 
 set -e
 
@@ -47,6 +50,46 @@ if [ "$1" = "--check" ]; then
     done
     echo ""
     echo "$count skill(s) installed."
+    exit 0
+fi
+
+# --uninstall: remove installed skills and exit
+if [ "$1" = "--uninstall" ]; then
+    uninstall_skill() {
+        local skill_name="$1"
+        local target_dir="$SKILLS_DIR/$skill_name"
+        if [ ! -d "$target_dir" ]; then
+            echo "Skill not installed: $skill_name (not found in $SKILLS_DIR)"
+            return 1
+        fi
+        echo "Removing $skill_name from $target_dir ..."
+        rm -rf "$target_dir"
+        echo "  Removed $skill_name."
+    }
+
+    if [ -n "$2" ]; then
+        # Uninstall a specific skill
+        uninstall_skill "$2"
+    else
+        # Uninstall all skills whose directory names match skill dirs in this repo
+        count=0
+        for dir in "$REPO_DIR"/*/; do
+            skill_name="$(basename "$dir")"
+            if [ -f "$dir/SKILL.md" ] && [ -d "$SKILLS_DIR/$skill_name" ]; then
+                uninstall_skill "$skill_name"
+                count=$((count + 1))
+            fi
+        done
+        if [ "$count" -eq 0 ]; then
+            echo "No matching skills found to uninstall."
+        else
+            echo ""
+            echo "$count skill(s) uninstalled."
+        fi
+    fi
+
+    echo ""
+    echo "Done. Restart Claude Code for changes to take effect."
     exit 0
 fi
 

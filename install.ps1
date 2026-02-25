@@ -1,13 +1,17 @@
 # Install Claude Code skills from this repository
 # Usage: .\install.ps1 [skill-name]
 #        .\install.ps1 --check
+#        .\install.ps1 --uninstall [skill-name]
 # Examples:
-#   .\install.ps1                    # Install all skills
-#   .\install.ps1 gtm-plan-generator # Install a specific skill
-#   .\install.ps1 --check            # List installed skills
+#   .\install.ps1                              # Install all skills
+#   .\install.ps1 gtm-plan-generator           # Install a specific skill
+#   .\install.ps1 --check                      # List installed skills
+#   .\install.ps1 --uninstall gtm-plan-generator  # Uninstall a specific skill
+#   .\install.ps1 --uninstall                  # Uninstall all skills from this repo
 
 param(
-    [string]$SkillName
+    [string]$SkillName,
+    [string]$ExtraArg
 )
 
 $ErrorActionPreference = "Stop"
@@ -58,6 +62,51 @@ if ($SkillName -eq "--check") {
     }
     Write-Host ""
     Write-Host "$count skill(s) installed."
+    exit 0
+}
+
+# --uninstall: remove installed skills and exit
+if ($SkillName -eq "--uninstall") {
+    function Uninstall-Skill {
+        param(
+            [Parameter(Mandatory)]
+            [string]$Name
+        )
+        $TargetDir = Join-Path $SkillsDir $Name
+        if (-not (Test-Path $TargetDir)) {
+            Write-Host "Skill not installed: $Name (not found in $SkillsDir)"
+            return $false
+        }
+        Write-Host "Removing $Name from $TargetDir ..."
+        Remove-Item -Path $TargetDir -Recurse -Force
+        Write-Host "  Removed $Name."
+        return $true
+    }
+
+    if ($ExtraArg) {
+        # Uninstall a specific skill
+        Uninstall-Skill -Name $ExtraArg
+    } else {
+        # Uninstall all skills whose directory names match skill dirs in this repo
+        $count = 0
+        Get-ChildItem -Path $RepoDir -Directory | ForEach-Object {
+            $candidate = Join-Path $_.FullName "SKILL.md"
+            $installed = Join-Path $SkillsDir $_.Name
+            if ((Test-Path $candidate) -and (Test-Path $installed)) {
+                Uninstall-Skill -Name $_.Name
+                $count++
+            }
+        }
+        if ($count -eq 0) {
+            Write-Host "No matching skills found to uninstall."
+        } else {
+            Write-Host ""
+            Write-Host "$count skill(s) uninstalled."
+        }
+    }
+
+    Write-Host ""
+    Write-Host "Done. Restart Claude Code for changes to take effect."
     exit 0
 }
 
