@@ -1,14 +1,54 @@
 #!/bin/bash
 # Install Claude Code skills from this repository
 # Usage: ./install.sh [skill-name]
+#        ./install.sh --check
 # Examples:
 #   ./install.sh                    # Install all skills
 #   ./install.sh gtm-plan-generator # Install a specific skill
+#   ./install.sh --check            # List installed skills
 
 set -e
 
 SKILLS_DIR="$HOME/.claude/skills"
 REPO_DIR="$(cd "$(dirname "$0")" && pwd)"
+
+# --check: verify installed skills and exit
+if [ "$1" = "--check" ]; then
+    if [ ! -d "$SKILLS_DIR" ]; then
+        echo "Skills directory not found: $SKILLS_DIR"
+        echo "No skills installed."
+        exit 0
+    fi
+
+    count=0
+    names=()
+    for dir in "$SKILLS_DIR"/*/; do
+        [ -d "$dir" ] || continue
+        if [ -f "$dir/SKILL.md" ]; then
+            # Extract the name field from YAML frontmatter (between --- delimiters)
+            skill_label=$(sed -n '/^---$/,/^---$/{ s/^name:[[:space:]]*//p; }' "$dir/SKILL.md" | head -1)
+            # Fall back to directory name if no name field found
+            if [ -z "$skill_label" ]; then
+                skill_label="$(basename "$dir")"
+            fi
+            names+=("$skill_label")
+            count=$((count + 1))
+        fi
+    done
+
+    if [ "$count" -eq 0 ]; then
+        echo "No skills found in $SKILLS_DIR"
+        exit 0
+    fi
+
+    echo "Installed skills in $SKILLS_DIR:"
+    for n in "${names[@]}"; do
+        echo "  $n"
+    done
+    echo ""
+    echo "$count skill(s) installed."
+    exit 0
+fi
 
 install_skill() {
     local skill_name="$1"

@@ -1,3 +1,5 @@
+# Python >= 3.9 required (Pillow 10+ requires Python 3.9+)
+
 # Core — reel-maker
 Pillow>=10.0
 

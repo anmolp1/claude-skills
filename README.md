@@ -26,12 +26,31 @@ cd claude-skills
 ./install.sh gtm-plan-generator
 ```
 
+### Check installed skills
+
+```bash
+./install.sh --check
+```
+
+### Windows (PowerShell)
+
+```powershell
+git clone https://github.com/anmolp1/claude-skills.git
+cd claude-skills
+.\install.ps1                     # Install all skills
+.\install.ps1 gtm-plan-generator  # Install a specific skill
+```
+
 ### Manual installation
 
 Copy any skill folder to your Claude Code skills directory:
 
 ```bash
+# macOS / Linux
 cp -r gtm-plan-generator ~/.claude/skills/
+
+# Windows (PowerShell)
+Copy-Item -Recurse gtm-plan-generator $HOME\.claude\skills\
 ```
 
 Skills are auto-discovered from `~/.claude/skills/` — restart Claude Code after installing.
