@@ -309,11 +309,8 @@ Packer.toBuffer(doc).then(buffer => {
 After generating, always run:
 
 ```bash
-# Validate XML structure
-python /mnt/skills/public/docx/scripts/office/validate.py output.docx
-
-# Convert to images for visual inspection
-python /mnt/skills/public/docx/scripts/office/soffice.py --headless --convert-to pdf output.docx
+# Convert to PDF for visual inspection (requires LibreOffice)
+libreoffice --headless --convert-to pdf output.docx
 pdftoppm -jpeg -r 150 output.pdf page
 
 # Inspect key pages (cover, personas, quick reference)

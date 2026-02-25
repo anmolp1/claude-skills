@@ -9,7 +9,7 @@ B2B consulting sales across five primary geographies.
 
 ### Market Characteristics
 - Largest B2B SaaS market globally
-- Highest concentration of ICP-fit companies (Series B–D, dbt adopters)
+- Highest concentration of ICP-fit companies (Series B–D, modern stack adopters)
 - Most competitive consulting market — prospects are heavily solicited
 - Strong preference for inbound credibility (content, referrals, social proof)
 
@@ -25,7 +25,7 @@ B2B consulting sales across five primary geographies.
 - Email sequences should be short, direct, metric-heavy
 - Name-drop clients or recognizable companies in messaging
 - Content marketing works well for inbound generation
-- dbt community is strong — meetups, Coalesce conference, Slack groups
+- Industry communities are strong — meetups, conferences, Slack groups
 
 ### Key Verticals (US)
 MarTech, FinTech, D2C/E-commerce SaaS, PLG B2B platforms, HR Tech
@@ -73,7 +73,7 @@ ME clients often return 6–12 months later with new projects.
 
 ### Market Characteristics
 - Mature SaaS market with pragmatic buyers
-- Strong dbt community (Melbourne and Sydney are hubs)
+- Strong technical community (Melbourne and Sydney are hubs)
 - English-first, direct communication style
 - Time zone overlap with Singapore enables APAC portfolio management
 - Smaller market size — account list will be more limited
@@ -86,10 +86,10 @@ ME clients often return 6–12 months later with new projects.
 - **Procurement**: Light for most SaaS companies. Quick sign-off cycles.
 
 ### Outreach Approach
-- Community engagement is key — dbt Melbourne, Sydney Data meetups
+- Community engagement is key — local tech meetups, data community events
 - Direct LinkedIn outreach works well (Australians are responsive on LinkedIn)
 - Email sequences should be concise and informal (avoid corporate-speak)
-- Referrals from the dbt community carry significant weight
+- Referrals from industry communities carry significant weight
 - Consider the AU financial year (July–June) for budget timing
 
 ### Key Verticals (AU)
@@ -138,7 +138,7 @@ defined end dates — plan for the project-grant cycle.
 ### Market Characteristics
 - Diverse sub-markets with different buying patterns
 - UK is the primary English-first entry point
-- DACH (Germany, Austria, Switzerland) and Nordics have strong open-source and dbt cultures
+- DACH (Germany, Austria, Switzerland) and Nordics have strong open-source and technical cultures
 - GDPR-awareness creates natural demand for data governance consulting
 - Timezone alignment with ME enables cross-geo relationship management
 
@@ -162,8 +162,8 @@ defined end dates — plan for the project-grant cycle.
 
 ### Outreach Approach
 - UK: LinkedIn + email, similar to US approach
-- DACH: Technical content + detailed proposals. dbt Berlin meetup is key community.
-- Nordics: Community-first approach. dbt Stockholm, data meetups.
+- DACH: Technical content + detailed proposals. Berlin tech meetups are key community.
+- Nordics: Community-first approach. Stockholm tech and data meetups.
 - All: Emphasize GDPR expertise and data governance awareness in messaging
 - UK FinTech ecosystem is particularly active and well-suited to ICP
 

@@ -43,7 +43,7 @@ Actively scan for missing dimensions that a BD team would need. Common gaps incl
 - **Emotional triggers** — what gets the prospect excited (opens the door)?
 - **Logical triggers** — what justifies the purchase (closes the deal)?
 - **The universal anxiety** — what's the one emotional through-line across all personas?
-- **Founder/leader positioning rules** — is there a "Jason Rule" where the founder should/shouldn't be sold for certain work?
+- **Founder/leader positioning rules** — is there a rule where the founder should/shouldn't be sold for certain work?
 - **The Goldilocks problem** — is there a maturity window where timing matters?
 - **Stack disqualifiers** — are there platforms to actively avoid (e.g., Azure)?
 - **Billing model disqualifiers** — does the company reject hourly billing?
@@ -57,13 +57,13 @@ Each buyer persona MUST have ALL of the following fields. If a source provides f
 | Field | Description | Example |
 |-------|-------------|---------|
 | Role title | Their job title / archetype | VP/Director of Growth |
-| Cares about | What motivates their day-to-day | ROAS and predictable results |
+| Cares about | What motivates their day-to-day | Predictable results and clear ROI |
 | Fears | What keeps them up at night about hiring a consultant | Conflicting or suspicious results |
-| Core anxiety / question | The one question they need answered | "How is data going to help me hit my targets?" |
+| Core anxiety / question | The one question they need answered | "How is this going to help me hit my targets?" |
 | Primary channel | How they discover the company | Referrals from colleagues |
 | How we win | The specific entry-point engagement that converts them | One-off consultations or audits |
 | What they need to see | What convinces them to trust | Social proof from other clients' metrics |
-| Proof metrics | How they measure the engagement's success | ROAS variance vs. finance, time-to-insight |
+| Proof metrics | How they measure the engagement's success | Key metric variance vs. baseline, time-to-insight |
 | Buyer type | Economic buyer or co-sponsor/champion | Economic Buyer |
 
 ### 5. Service Matrix Standard
@@ -154,7 +154,7 @@ Before presenting the .docx:
 When drafting the ICP content itself:
 
 - Write for a BD person who will use this document daily. Be direct and actionable.
-- Use the persona archetype names (Tony, Jimmy, Betty, Hank) — BD teams remember names better than role titles.
+- Use the persona archetype names from the user's ICP — BD teams remember names better than role titles.
 - Frame fears as things to "listen for" on calls, not academic descriptions.
 - Frame "how we win" as specific actions, not vague strategies.
 - The Quick Reference section should be scannable in 10 seconds.

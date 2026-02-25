@@ -29,10 +29,10 @@ Generate comprehensive, actionable Ideal Customer Profile firmographics document
 
 The ICP document is read daily by BD and sales people. Write accordingly:
 
-- **Direct and actionable.** "Tony hires DM as a last-mile pinch-hitter" beats "Tony may be interested in consulting engagements."
-- **Use persona names.** "Listen for Tony's fear of conflicting ROAS numbers" is stickier than "The VP of Growth persona is concerned about attribution."
+- **Direct and actionable.** "[Persona] hires us as a last-mile pinch-hitter" beats "[Persona] may be interested in consulting engagements."
+- **Use persona names.** "Listen for [Persona]'s fear of conflicting metrics" is stickier than "The VP of Growth persona is concerned about attribution."
 - **Frame fears as listening cues.** BD needs to recognize these in real conversations. Write fears as things prospects actually say or signal, not academic descriptions.
-- **Frame entry points as actions.** "Win with a ROAS Truth Sprint" is better than "Consider offering an attribution audit."
+- **Frame entry points as actions.** "Win with a Quick Audit Sprint" is better than "Consider offering an audit."
 - **The Quick Reference must scan in 10 seconds.** A BD person glancing at a LinkedIn profile should be able to check Yes/No signals instantly.
 
 ### When Communicating with the User During Workflow
@@ -287,10 +287,10 @@ Principle: Each major section should start on a fresh page. Tables should not be
 
 ## Anti-Patterns to Avoid
 
-- **Generic personas.** "VP of Marketing wants better ROI" is useless. Specific: "Tony fears conflicting ROAS numbers and hires DM as a last-mile pinch-hitter."
+- **Generic personas.** "VP of Marketing wants better ROI" is useless. Specific: "[Persona] fears conflicting metrics and hires us as a last-mile pinch-hitter."
 - **Uniform acquisition channels.** If every persona's channel is "referrals and LinkedIn", you haven't extracted enough. Push for specifics.
-- **Missing emotional layer.** Logical triggers (dbt, attribution) are necessary but insufficient. BD needs to know what opens the door emotionally.
-- **Academic tone.** "The consideration phase may benefit from..." — nobody reads this. Write: "Betty won't buy until she sees social proof from clients who look like her."
+- **Missing emotional layer.** Logical triggers (tooling, implementation) are necessary but insufficient. BD needs to know what opens the door emotionally.
+- **Academic tone.** "The consideration phase may benefit from..." — nobody reads this. Write: "[Persona] won't buy until she sees social proof from clients who look like her."
 - **Undifferentiated services.** If door openers and strategic offerings blur together, the BD team won't know where to start. Enforce the timeline/budget separation.
 - **Weak disqualifiers.** "Not a great fit" is weak. "Business system re-engineering — becomes a 'solving for the unknown' trap" gives the BD team a reason they can articulate.
 

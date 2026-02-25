@@ -13,7 +13,7 @@ Extract from the ICP document:
 - **Revenue range**: e.g., $10M–$200M ARR
 - **Headcount range**: e.g., 100–1,000 employees
 - **Verticals**: e.g., MarTech, FinTech, HealthTech, E-commerce/D2C, HR Tech, PLG B2B
-- **Required tech stack**: e.g., BigQuery/Snowflake/Redshift + dbt + at least 2 ad platforms
+- **Required tech stack**: e.g., specific DW + transformation tools + key platforms
 - **Geography**: e.g., English-first teams in US, EU, APAC
 - **GTM motion**: e.g., paid acquisition + lifecycle marketing + PLG
 - **Disqualifiers**: e.g., Azure-first, no DW, wants agency services, enterprise procurement >6 months
@@ -25,13 +25,13 @@ For each geography, identify companies using these signals:
 **US (target 30–40 accounts)**
 - Crunchbase: filter by stage, vertical, funding recency
 - LinkedIn: search for "Head of Data" or "VP Growth" at SaaS companies
-- dbt community: companies presenting at Coalesce, contributing dbt packages
-- Job boards: companies hiring "Analytics Engineer" or "Data Platform Engineer"
-- Tech blog mentions: companies writing about dbt, Snowflake, BigQuery migrations
+- Industry communities: companies presenting at conferences, contributing to open-source
+- Job boards: companies hiring for relevant technical roles
+- Tech blog mentions: companies writing about relevant tools or migrations
 
 **Europe (target 10–15 accounts)**
 - Focus on UK first (English-first), then DACH and Nordics
-- dbt London / Berlin meetup attendees and speakers
+- Industry meetup attendees and speakers in London / Berlin
 - EU SaaS directories: SaaStock attendees, Point Nine portfolio
 - Sifted / TechEU funded company lists
 
@@ -76,12 +76,12 @@ For each validated account, identify:
 ### Step 5: Assign Persona Mapping
 
 Map each decision-maker to the ICP's persona framework. Use the ICP's own names:
-- If ICP has "Tony — VP/Director of Growth": Map all VP Growth, VP Marketing, CMO-type
-- If ICP has "Jimmy — Head of Data": Map all Head of Data, Director of Data Eng, VP Data
-- If ICP has "Betty — VP RevOps": Map all VP Revenue Operations, Head of Sales Ops
-- If ICP has "Hank — Head of Product Analytics": Map all Director of Growth, Head of PLG
+- If ICP has a Growth persona: Map all VP Growth, VP Marketing, CMO-type titles
+- If ICP has a Data persona: Map all Head of Data, Director of Data Eng, VP Data titles
+- If ICP has a RevOps persona: Map all VP Revenue Operations, Head of Sales Ops titles
+- If ICP has a Product Analytics persona: Map all Director of Growth, Head of PLG titles
 
-When a decision-maker could map to multiple personas, list both (e.g., "Jimmy/Hank").
+When a decision-maker could map to multiple personas, list both (e.g., "Data/Product").
 
 ---
 
@@ -91,7 +91,7 @@ Each geography table must use this column structure:
 
 | Company | Vertical | Decision Maker | Persona | Trigger Event | Known Stack |
 |---------|----------|---------------|---------|---------------|-------------|
-| Webflow | MarTech / PLG | VP of Growth | Tony | Attribution clarity across PLG + paid | Snowflake + dbt |
+| [Company] | [Vertical] | VP of Growth | [Persona] | [Specific trigger event] | [Known/inferred stack] |
 
 ### Column Guidelines
 
@@ -105,7 +105,7 @@ Good: "VP of Data Engineering"
 Bad: "Senior leader"
 
 **Persona**: Map to ICP persona names. Use the ICP's labels exactly.
-If uncertain, show both: "Jimmy/Hank"
+If uncertain, show both (e.g., "Data/Product")
 
 **Trigger Event**: Specific and actionable, not generic.
 Good: "Post-Series D data scaling"
@@ -114,8 +114,8 @@ Good: "Recently hired a Head of Data"
 Bad: "Growing company"
 
 **Known Stack**: List specific tools when known, or best inference.
-Good: "BigQuery + dbt Cloud + Fivetran"
-Acceptable: "BigQuery + dbt (inferred from job postings)"
+Good: "[DW] + [transformation tool] + [ingestion tool]"
+Acceptable: "[DW] + [tool] (inferred from job postings)"
 Bad: "Cloud-based"
 
 ---

@@ -45,13 +45,13 @@ Generate a list of 50–100 real, ICP-qualified target accounts across all speci
 2. For each geography, identify companies that match:
    - Correct vertical (from ICP sweet spots)
    - Correct stage/revenue range
-   - Known or likely tech stack match (check for DW, dbt, ad platforms, etc.)
-   - Active trigger events (recent funding, new hires, dbt adoption, etc.)
+   - Known or likely tech stack match (check for DW, transformation tools, key platforms, etc.)
+   - Active trigger events (recent funding, new hires, tool adoption, etc.)
 3. For each account, produce:
    - Company name (must be a real, verifiable company)
    - Vertical classification
    - Decision-maker title (mapped to ICP persona)
-   - ICP persona assignment (e.g., "Tony," "Jimmy," "Betty," "Hank")
+   - ICP persona assignment (mapped to the user's ICP persona names)
    - Identified trigger event
    - Known/inferred tech stack
 4. Distribute accounts across geographies proportional to market size and ICP fit:
@@ -160,7 +160,7 @@ Read `references/FUNNEL_MATH.md` for conversion rate benchmarks.
 Convert plan content and revenue models into polished, professional .docx files.
 
 ### Responsibilities
-1. Read the docx skill (`/mnt/skills/public/docx/SKILL.md`) for formatting best practices
+1. Read the docx skill (if available in your environment) for formatting best practices
 2. Generate two .docx files using docx-js (Node.js):
    - `[CompanyName]_90Day_GTM_Plan.docx`
    - `[CompanyName]_Revenue_Projection_Y1_Y3.docx`
@@ -170,8 +170,8 @@ Convert plan content and revenue models into polished, professional .docx files.
    - Color-coded tables (dark blue headers, alternating row shading)
    - Arial font throughout, proper heading hierarchy
    - Page breaks between major sections
-4. Validate both documents using the docx validation script
-5. Save to `/mnt/user-data/outputs/` and present to user
+4. Validate both documents
+5. Present to user
 
 ### Document Formatting Standards
 - Page size: US Letter (12240 × 15840 DXA)
@@ -186,7 +186,7 @@ Convert plan content and revenue models into polished, professional .docx files.
 - Cell margins: top/bottom 60, left/right 100
 
 ### Reference
-Read `/mnt/skills/public/docx/SKILL.md` for docx-js usage and validation.
+If a docx skill is available in your environment, use it for formatting and validation.
 
 ---
 

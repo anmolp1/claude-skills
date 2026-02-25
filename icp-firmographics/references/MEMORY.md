@@ -34,7 +34,7 @@ When processing any source document (deck, knowledge base, notes, conversation),
 | Industry verticals | Which industries to target | Look for both primary and secondary |
 | Primary pain points | What problems they're trying to solve | Ad spend, attribution, revenue ops, merchandising |
 | Emotional perspective | What excites them about buying | "Novel ideas", "AI-driven initiatives" |
-| Logical perspective | What justifies the purchase rationally | "dbt implementation", specific tooling needs |
+| Logical perspective | What justifies the purchase rationally | Specific tooling or implementation needs |
 
 ### Technographics
 
@@ -43,7 +43,7 @@ When processing any source document (deck, knowledge base, notes, conversation),
 | Stack philosophy | Open-source preference, cloud-first, etc. | This shapes all tool preferences |
 | Cloud platform preference | GCP, AWS, Azure, Databricks | Explicit non-preferences (e.g., "non-Azure") |
 | Data warehouse | Required DW platforms | "Must have at least one" type requirements |
-| Transformation | dbt, custom SQL, etc. | dbt is often a buying trigger, not just a tool |
+| Transformation | dbt, custom SQL, etc. | A key tool is often a buying trigger, not just a tool |
 | Ingestion | Fivetran, Hevo, Singer, etc. | Custom pipelines count |
 | Orchestration | Airflow, Prefect, Composer, etc. | |
 | CRM | Salesforce, HubSpot, etc. | |
@@ -59,7 +59,7 @@ For EACH persona, extract:
 
 | Field | What to Extract |
 |-------|----------------|
-| Archetype name | Short memorable name (e.g., "Tony") |
+| Archetype name | Short memorable name (e.g., "Alex") |
 | Role title | Full title (e.g., VP/Director of Growth or Performance Marketing) |
 | Buyer type | Economic Buyer or Co-Sponsor/Champion |
 | Cares about | Core motivation |
