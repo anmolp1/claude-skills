@@ -8,6 +8,7 @@ A collection of reusable [Claude Code](https://docs.anthropic.com/en/docs/claude
 |-------|-------------|
 | **[gtm-plan-generator](./gtm-plan-generator/)** | Converts ICP firmographics into a 90-day GTM plan and Y1–Y3 revenue projection. Produces two .docx deliverables with named target accounts, funnel math, and geography-specific strategies. |
 | **[icp-firmographics](./icp-firmographics/)** | Generates board-ready Ideal Customer Profile documents from strategy decks, knowledge bases, or raw notes. Produces a formatted .docx with buyer personas, qualification criteria, and quick-reference signals. |
+| **[proposal-writer](./proposal-writer/)** | Generates professional consulting proposals as Word documents from prospect briefs, meeting notes, or verbal descriptions. Produces a polished .docx with scope of work, timeline, pricing, and terms. |
 | **[reel-maker](./reel-maker/)** | Creates production-ready YouTube Shorts and Instagram Reels as 1080x1920 MP4 files with animated motion graphics, timed captions, and scene transitions. Full pipeline from script to final export via Pillow + FFmpeg. |
 
 ## Installation
@@ -71,6 +72,7 @@ Once installed, skills activate automatically when Claude detects a relevant req
 ```
 /gtm-plan-generator
 /icp-firmographics
+/proposal-writer
 /reel-maker
 ```
 
@@ -91,6 +93,15 @@ Provide strategy materials (decks, notes, knowledge bases) and ask for an ICP do
 - "Generate firmographics for our ideal customers"
 
 **Outputs:** A formatted .docx with 10 structured sections including personas, qualification criteria, and quick-reference signals.
+
+### proposal-writer
+
+Provide a prospect brief, meeting notes, or describe the engagement and ask for a proposal. Trigger phrases:
+- "Write a proposal for [prospect name]"
+- "Create a SOW for this consulting engagement"
+- "Draft a project proposal from these meeting notes"
+
+**Outputs:** A formatted .docx proposal with executive summary, scope of work, timeline, pricing, and terms.
 
 ### reel-maker
 
@@ -142,7 +153,7 @@ user-invocable: true
 
 Skills may require additional tools depending on which ones you install:
 
-- **Node.js** with the `docx` npm package — for .docx generation (gtm-plan-generator, icp-firmographics)
+- **Node.js** with the `docx` npm package — for .docx generation (gtm-plan-generator, icp-firmographics, proposal-writer)
 - **LibreOffice** and **Poppler** — optional, for PDF conversion and visual QA
 - **Python 3** with **Pillow** — for reel-maker video rendering
 - **FFmpeg** — for reel-maker MP4 export
