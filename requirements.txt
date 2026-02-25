@@ -1,0 +1,12 @@
+# Core — reel-maker
+Pillow>=10.0
+
+# Optional — reel-maker TTS (choose one)
+# dia @ git+https://github.com/nari-labs/dia.git   # Local TTS (requires CUDA GPU)
+# torch>=2.0                                        # Required for Dia
+# transformers                                      # Required for Dia (HF variant)
+# soundfile                                         # Required for Dia audio export
+# requests                                          # Required for Higgs Audio API
+
+# Optional — docx generation (gtm-plan-generator, icp-firmographics)
+# Install via npm instead: npm install docx
