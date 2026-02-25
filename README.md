@@ -99,12 +99,13 @@ Skills may require additional tools depending on which ones you install:
 
 ## Contributing
 
-To add a new skill:
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for the full guide. The short version:
 
 1. Create a directory with a kebab-case name
 2. Add a `SKILL.md` with YAML frontmatter (`name`, `description`, `user-invocable`)
 3. Place reference files in a `references/` subdirectory
 4. Test by installing locally with `./install.sh your-skill-name`
+5. Submit a PR with an update to the README
 
 ## License
 
