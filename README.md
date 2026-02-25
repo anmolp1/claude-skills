@@ -15,7 +15,7 @@ A collection of reusable [Claude Code](https://docs.anthropic.com/en/docs/claude
 ### Install all skills
 
 ```bash
-git clone https://github.com/anmolparimoo/claude-skills.git
+git clone https://github.com/anmolp1/claude-skills.git
 cd claude-skills
 ./install.sh
 ```

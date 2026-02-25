@@ -7,6 +7,7 @@ Renders directly to FFmpeg via stdin pipe (no temp files)
 
 import subprocess
 import sys
+import os
 import math
 import struct
 from PIL import Image, ImageDraw, ImageFont
@@ -16,7 +17,7 @@ W, H = 1080, 1920
 FPS = 30
 DURATION = 57
 TOTAL_FRAMES = DURATION * FPS
-OUTPUT = "/home/claude/Video5_ContextErosion_1080x1920_30fps.mp4"
+OUTPUT = os.path.join(os.getcwd(), "Video5_ContextErosion_1080x1920_30fps.mp4")
 
 # ── Colors ──────────────────────────────────────────────────
 BG      = (13, 17, 23)
@@ -33,10 +34,29 @@ def rgba(color, alpha):
     return tuple(int(c * alpha + b * (1 - alpha)) for c, b in zip(color, BG))
 
 # ── Fonts ───────────────────────────────────────────────────
-FONT_DIR = "/usr/share/fonts/truetype/dejavu/"
+def _find_font_dir():
+    """Find DejaVu fonts across platforms."""
+    candidates = [
+        "/usr/share/fonts/truetype/dejavu/",          # Linux
+        "/usr/share/fonts/TTF/",                       # Arch Linux
+        "/Library/Fonts/",                             # macOS
+        "/System/Library/Fonts/Supplemental/",         # macOS (supplemental)
+        os.path.expanduser("~/Library/Fonts/"),        # macOS (user)
+        "C:\\Windows\\Fonts\\",                        # Windows
+    ]
+    for d in candidates:
+        if os.path.isdir(d):
+            return d
+    return ""
+
+FONT_DIR = _find_font_dir()
+
 def font(size, bold=False):
     name = "DejaVuSansMono-Bold.ttf" if bold else "DejaVuSansMono.ttf"
-    return ImageFont.truetype(FONT_DIR + name, size)
+    try:
+        return ImageFont.truetype(FONT_DIR + name, size)
+    except OSError:
+        return ImageFont.load_default(size)
 
 def font_sans(size, bold=False):
     name = "DejaVuSans-Bold.ttf" if bold else "DejaVuSans.ttf"

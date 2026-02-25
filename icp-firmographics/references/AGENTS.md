@@ -121,7 +121,7 @@ Same as above but skip cross-reference. Instead, do an internal consistency chec
 If no files are uploaded and the user is building an ICP from scratch:
 
 1. Ask structured questions covering each of the 10 sections
-2. Use `conversation_search` to pull in any relevant prior discussions
+2. Reference any relevant prior discussions in the conversation
 3. Draft incrementally — show each section and get approval before moving on
 4. Format at the end
 

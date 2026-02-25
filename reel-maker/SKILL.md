@@ -1,5 +1,6 @@
 ---
 name: reel-maker
+user-invocable: true
 description: "Create production-ready YouTube Shorts and Instagram Reels as MP4 video files with animated motion graphics, timed captions, and scene transitions. Use this skill whenever the user asks to make a reel, Short, vertical video, TikTok, 9:16 video, animated explainer, or short-form video content. Also trigger when the user says 'render a video', 'export as MP4', 'create a Short for [topic]', 'make an animated reel', or references producing video content from a script or outline. This skill handles the full pipeline: scriptwriting, animated preview, and final MP4 export via Pillow + FFmpeg."
 ---
 
@@ -20,7 +21,7 @@ Given a topic, outline, or script → this skill outputs:
 **Core (always required):**
 - Python 3 with Pillow (`pip install pillow --break-system-packages` if needed)
 - FFmpeg (system-installed, verify with `which ffmpeg`)
-- DejaVu fonts at `/usr/share/fonts/truetype/dejavu/` (standard on Ubuntu)
+- DejaVu fonts (standard on Ubuntu; on macOS/Windows the renderer falls back to system fonts automatically)
 
 **TTS — install one (in order of quality):**
 - **Dia** (recommended): `pip install git+https://github.com/nari-labs/dia.git` + CUDA GPU (~4.4GB)

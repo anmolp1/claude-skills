@@ -3,6 +3,7 @@ Reusable Pillow drawing helpers for reel-maker.
 These are shared across all video renderers.
 """
 
+import os
 from PIL import ImageFont
 
 # ── Constants ───────────────────────────────────────────
@@ -15,7 +16,24 @@ YELLOW = (255, 214, 10)
 WHITE = (240, 246, 252)
 GRAY = (139, 148, 158)
 
-FONT_DIR = "/usr/share/fonts/truetype/dejavu/"
+
+def _find_font_dir():
+    """Find DejaVu fonts across platforms."""
+    candidates = [
+        "/usr/share/fonts/truetype/dejavu/",          # Linux (Debian/Ubuntu)
+        "/usr/share/fonts/TTF/",                       # Linux (Arch)
+        "/Library/Fonts/",                             # macOS
+        "/System/Library/Fonts/Supplemental/",         # macOS (supplemental)
+        os.path.expanduser("~/Library/Fonts/"),        # macOS (user)
+        "C:\\Windows\\Fonts\\",                        # Windows
+    ]
+    for d in candidates:
+        if os.path.isdir(d):
+            return d
+    return ""
+
+
+FONT_DIR = _find_font_dir()
 
 
 # ── Color Helpers ───────────────────────────────────────
@@ -26,16 +44,24 @@ def rgba(color, alpha):
 
 
 # ── Font Helpers ────────────────────────────────────────
+def _load_font(name, size):
+    """Load a font by name, falling back to default if not found."""
+    try:
+        return ImageFont.truetype(FONT_DIR + name, size)
+    except OSError:
+        return ImageFont.load_default(size)
+
+
 def font_mono(size, bold=True):
     """Monospace font (DejaVu Sans Mono)."""
     name = "DejaVuSansMono-Bold.ttf" if bold else "DejaVuSansMono.ttf"
-    return ImageFont.truetype(FONT_DIR + name, size)
+    return _load_font(name, size)
 
 
 def font_sans(size, bold=True):
     """Sans-serif font (DejaVu Sans)."""
     name = "DejaVuSans-Bold.ttf" if bold else "DejaVuSans.ttf"
-    return ImageFont.truetype(FONT_DIR + name, size)
+    return _load_font(name, size)
 
 
 # ── Drawing Primitives ──────────────────────────────────
