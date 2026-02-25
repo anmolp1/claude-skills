@@ -12,13 +12,13 @@ When processing any source document (deck, knowledge base, notes, conversation),
 
 | Field | What to Extract | Example |
 |-------|----------------|---------|
-| Company name | Legal/brand name | Domain Methods |
-| Principal leader | Founder or CEO name | Jason B. Hart |
-| Core focus | What the company does in one line | Marketing Data, Revenue, Analytics Engineering for SaaS & Ecommerce |
-| Mission statement | Their articulated mission | Translate messy business data into usable insight |
-| Key differentiator | What makes them unique | "Obsessed with Truth and UX" |
-| Operational philosophy | How they think about work | "Jason != Agency; Agency != Jason" |
-| Cultural values | Named values | Accessibility ("just a call away"), Pragmatism ("80/20 rule") |
+| Company name | Legal/brand name | Acme Analytics |
+| Principal leader | Founder or CEO name | Jane Smith |
+| Core focus | What the company does in one line | Data analytics consulting for B2B SaaS |
+| Mission statement | Their articulated mission | Turn messy data into actionable insight |
+| Key differentiator | What makes them unique | "Speed and precision over scope creep" |
+| Operational philosophy | How they think about work | Outcome-based, not hours-based |
+| Cultural values | Named values | Pragmatism ("80/20 rule"), Transparency |
 
 ### Target Firmographics
 

@@ -91,6 +91,7 @@ account selection.
    - `references/GEOGRAPHY_PLAYBOOK.md` — Geography-specific buying patterns
    - `references/FUNNEL_MATH.md` — Conversion benchmarks for consulting outbound
    - `references/ACCOUNT_RESEARCH.md` — How to select and validate target accounts
+   - `references/MEMORY.md` — Learned patterns and benchmarks (if present; copy from `MEMORY.md.example` to get started)
 
 ### Phase 2: Generate the 90-Day GTM Plan
 

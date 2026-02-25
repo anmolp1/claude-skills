@@ -4,26 +4,29 @@ This file captures patterns, heuristics, and lessons learned from successful GTM
 generations. It serves as institutional memory for the skill, ensuring consistency
 across runs and avoiding repeated mistakes.
 
+> **Note:** Copy this file to `MEMORY.md` and populate with your own benchmarks,
+> geography data, and lessons learned from actual plan generations.
+
 ---
 
 ## Proven Conversion Benchmarks (B2B Consulting Outbound)
 
-These benchmarks are calibrated for boutique consulting firms selling $15K–$400K
-project-based engagements to mid-market B2B SaaS companies. They are NOT applicable
-to enterprise sales, product sales, or agency models.
+These benchmarks are calibrated for boutique consulting firms selling project-based
+engagements to mid-market B2B companies. Adjust ranges based on your pricing tier,
+industry, and sales motion.
 
 | Metric | Conservative | Base | Optimistic | Source |
 |--------|-------------|------|-----------|--------|
-| LinkedIn connection accept rate | 6% | 10% | 15% | Tested across 500+ touches |
-| LinkedIn reply rate (after accept) | 3% | 5% | 8% | Personalized, pain-specific messages |
-| Cold email reply rate | 2% | 4% | 6% | 3-touch sequences, A/B tested |
-| Warm intro → discovery call | 25% | 35% | 45% | Through existing client network |
-| Discovery call → proposal | 40% | 50% | 65% | Using paid discovery as filter |
-| Proposal → close (door-opener) | 25% | 33% | 40% | $15K–$50K engagements |
-| Proposal → close (strategic) | 20% | 28% | 35% | $100K–$400K engagements |
-| Door-opener → expansion | 30% | 50% | 65% | Week 3 expansion conversation |
-| Content-driven inbound (Y1 end) | 10% | 20% | 35% | % of pipeline from organic |
-| Quarterly client churn rate | 50% | 40% | 25% | Consulting engagements |
+| LinkedIn connection accept rate | 6% | 10% | 15% | |
+| LinkedIn reply rate (after accept) | 3% | 5% | 8% | |
+| Cold email reply rate | 2% | 4% | 6% | |
+| Warm intro → discovery call | 25% | 35% | 45% | |
+| Discovery call → proposal | 40% | 50% | 65% | |
+| Proposal → close (door-opener) | 25% | 33% | 40% | |
+| Proposal → close (strategic) | 20% | 28% | 35% | |
+| Door-opener → expansion | 30% | 50% | 65% | |
+| Content-driven inbound (Y1 end) | 10% | 20% | 35% | |
+| Quarterly client churn rate | 50% | 40% | 25% | |
 
 ## Geography Heuristics
 
@@ -32,7 +35,7 @@ When the ICP specifies multiple geographies without explicit weighting:
 - **US**: 35–40% of target accounts (largest market, highest competition)
 - **Europe**: 15–20% (UK as primary entry, DACH/Nordics as secondary)
 - **Middle East**: 10–15% (fewer accounts, higher ACV, longer cycles)
-- **Australia**: 10–15% (mature market, strong dbt community)
+- **Australia**: 10–15% (mature market)
 - **Singapore/APAC**: 10–15% (hub for regional companies)
 
 Adjust if the ICP explicitly emphasizes or de-emphasizes a geography.
@@ -78,16 +81,15 @@ Never model flat quarterly revenue in Y1. It's unrealistic.
 ### The Expansion Rate Rule of Thumb
 The door-opener → strategic expansion rate is the single biggest variable in
 consulting revenue models. A useful sensitivity check:
-- **Each 1% improvement in expansion rate ≈ $40K–$60K additional annual revenue**
-  (for a firm doing 15–20 door-openers/year at $30K avg, expanding to $200K strategic)
-- This makes the week 3 expansion conversation the highest-leverage activity in the business
+- Each 1% improvement in expansion rate can yield significant additional annual revenue
+- This makes the expansion conversation the highest-leverage activity in the business
 
 ### Delivery Capacity Constraints
 Revenue models MUST account for delivery capacity:
-- **Solo founder**: 3–4 concurrent projects max → caps revenue at ~$800K–$1.2M/year
-- **Founder + 1 senior hire**: 5–6 concurrent → ~$1.5M–$2.2M/year
-- **Team of 4–5**: 8–10 concurrent → ~$2.5M–$4M/year
-- **Team of 6+**: 10–15 concurrent → $4M–$6M/year
+- **Solo founder**: 3–4 concurrent projects max
+- **Founder + 1 senior hire**: 5–6 concurrent
+- **Team of 4–5**: 8–10 concurrent
+- **Team of 6+**: 10–15 concurrent
 
 If the revenue model projects more than capacity allows, flag it and note that
 hiring must happen.
@@ -105,35 +107,23 @@ hiring must happen.
 ### Common Account Selection Mistakes
 - Naming companies that are too well-known/large (they have internal teams for this)
 - Picking companies in the ICP's "avoid" verticals
-- Choosing companies on Azure when the ICP de-prioritizes Azure
-- Selecting pre-revenue startups when the ICP requires $10M+ ARR
+- Selecting pre-revenue startups when the ICP requires a revenue floor
 - Not checking if the company has recently been acquired (changes decision-making)
 - Naming the same company twice (parent + subsidiary)
 
 ### Stack Inference Rules
 When exact tech stack isn't publicly known, infer from signals:
-- Job postings mentioning dbt, Snowflake, BigQuery → likely ICP-fit stack
-- "Analytics Engineer" or "Data Platform Engineer" roles → dbt adoption signal
-- Google Cloud Partner badge → GCP environment
-- Fivetran or Hevo in job postings → modern ingestion stack
-- Looker usage → likely BigQuery (common pairing)
-- Salesforce job postings → CRM confirmed
+- Job postings mentioning relevant tools → likely ICP-fit stack
+- Relevant engineering roles → adoption signal
+- Cloud partner badges → cloud environment confirmation
+- Tool pairings (e.g., Looker → likely BigQuery)
 
 ## Messaging Patterns That Work
 
 ### Emotional → Logical Sequence
-The ICP's emotional/logical trigger framework is a proven pattern:
 1. **Open emotional**: "We saw your post about X and it resonated"
 2. **Bridge with specificity**: "We recently audited a similar setup for [client]"
-3. **Close logical**: "Here's the specific audit scope and what we'll deliver in 3 weeks"
-
-### Objection Handling: "Why Not Hourly?"
-If the ICP explicitly rejects hourly billing, the plan must include this objection
-handler because prospects WILL ask:
-- **What you're buying**: An outcome, not hours. Scoped, time-boxed, defined deliverables.
-- **Risk profile**: The firm absorbs delivery risk, not the client.
-- **Speed**: Pattern-matched from dozens of similar engagements. No ramp-up.
-- **Incentive alignment**: Hourly billing incentivizes slow work. Value-based incentivizes outcomes.
+3. **Close logical**: "Here's the specific audit scope and what we'll deliver in N weeks"
 
 ## Document Generation Patterns
 
@@ -158,4 +148,4 @@ The three scenarios must represent genuinely different strategic paths, not just
 
 | Date | Change | Reason |
 |------|--------|--------|
-| Feb 2026 | Initial creation | Captured from first successful GTM plan + revenue projection generation for Domain Methods |
+| | Initial creation | Copy from MEMORY.md.example and populate with your data |
